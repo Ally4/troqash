@@ -6,7 +6,8 @@ export default function LandingPage({navigation}) {
             <SafeAreaView style={styles.container}>
               <ScrollView >
         {/* <View style={{backgroundColor:"black", width:250, height:250, borderRadius:150, opacity:0.2, top: -90, left:-90}}></View> */}
-        <Image source={require("../../assets/photos/logo.png")} style={{marginTop:150}}/>
+        {/* <Image source={require("../../assets/photos/logo.png")} style={{marginTop:150}}/> */}
+        <Text style={styles.textName}>TROQASH</Text>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
       <Text style={styles.buttonText}>Login</Text>
     </TouchableOpacity>
@@ -21,8 +22,9 @@ export default function LandingPage({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor:rgb(62, 199, 11, .2),
+    display: 'flex',
+    justifyContent: 'center', /* Center horizontally */
+    alignItems: 'center',
 },
 button: {
   backgroundColor: 'white',
@@ -33,6 +35,12 @@ button: {
   // justifyContent:"center"    its not working in js engine: hermes
 },
 buttonText: {
+  color: '#2FCBD8',
+  fontSize: 16,
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
+textName: {
   color: '#2FCBD8',
   fontSize: 16,
   fontWeight: 'bold',
