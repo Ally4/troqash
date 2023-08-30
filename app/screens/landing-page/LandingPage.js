@@ -22,9 +22,11 @@ export default function LandingPage({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
-    justifyContent: 'center', /* Center horizontally */
+    flex: 1, 
+    justifyContent: 'center', 
     alignItems: 'center',
+    marginTop: 350,
+    // alignContent: 'center',
 },
 button: {
   backgroundColor: 'white',
@@ -35,19 +37,20 @@ button: {
   // justifyContent:"center"    its not working in js engine: hermes
 },
 buttonText: {
-  color: '#2FCBD8',
+  color: '#00A859',
   fontSize: 16,
   fontWeight: 'bold',
   textAlign: 'center',
 },
 textName: {
-  color: '#2FCBD8',
-  fontSize: 16,
+  color: '#00A859',
+  fontSize: 30,
   fontWeight: 'bold',
   textAlign: 'center',
+  marginBottom: 20,
 },
 button1: {
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   padding: 10,
   borderRadius: 5,
   borderColor:"white",

@@ -9,11 +9,11 @@ export default function MainScreen() {
 
 
     const data = [
-      { id: '1', title: 'Urine Analysis' },
-      { id: '2', title: 'Serum Sodium' },
-      { id: '3', title: 'Giving specimen' },
-      { id: '4', title: 'Saliva test' },
-      { id: '5', title: 'Home nursing' },
+      { id: '1', title: 'Clothes' },
+      { id: '2', title: 'Electronics' },
+      { id: '3', title: 'Shoes' },
+      { id: '4', title: 'Furniture' },
+      { id: '5', title: 'Others' },
     ];
 
     const navigation = useNavigation();
@@ -22,21 +22,22 @@ export default function MainScreen() {
   return (
       <SafeAreaView style={styles.container1}> 
       <ScrollView >
-        <View style={{backgroundColor:"#2FCBD8", width:250, height:250, borderRadius:150, top: -90, left:-90}}></View>
+        <View style={{backgroundColor:"#00A859", width:250, height:250, top: -90, left:-90}}></View>
         <View>
         <TouchableOpacity onPress={() => navigation.goBack()} ><Image source={require("../../assets/photos/left-arrow.png")} style={{marginTop:-220, marginLeft:10, width:40, height:40}}/></TouchableOpacity>
-        <Image source={require("../../assets/photos/profile.png")} style={{marginTop:-150, marginLeft:10, width:50, height:50}}/>
-        <Image source={require("../../assets/photos/logo-blue.png")} style={{marginTop:-40, marginLeft:135}}/>
-        <Image source={require("../../assets/photos/bell.png")} style={{marginTop:-30,marginLeft:330, width:35, height:35}}/>
+        <Image source={require("../../assets/photos/user.png")} style={{marginTop:-150, marginLeft:10, width:50, height:50}}/>
+        <Text style={styles.textName}>TROQASH</Text>
+        {/* <Image source={require("../../assets/photos/logo-blue.png")} style={{marginTop:-40, marginLeft:135}}/> */}
+        <Image source={require("../../assets/photos/notification.png")} style={{marginTop:-30,marginLeft:330, width:35, height:35}}/>
         </View>
-        <Text style={styles.helloText}>Hello, <Text style={styles.abebeText}>Abebe!</Text></Text>
-        <Text style={styles.testText}>Which facility or test are you looking for today?</Text>
+        <Text style={styles.helloText}>Hello, <Text style={styles.abebeText}>Master G!</Text></Text>
+        <Text style={styles.testText}>What are you going to change, or change for money today?.</Text>
         <TextInput
          style={{
           backgroundColor: 'white',
           padding: 10,
           borderRadius: 10,
-          borderColor:"#2FCBD8",
+          borderColor:"#00A859",
           borderWidth:1,
           width:300,
           marginTop:20,
@@ -44,7 +45,7 @@ export default function MainScreen() {
           }}
           placeholder={'Search'}
            />
-         <Text style={styles.labText}>Lab Tests</Text>
+         <Text style={styles.labText}>Categories</Text>
          <FlatList
         horizontal
         data={data}
@@ -53,15 +54,15 @@ export default function MainScreen() {
           <View style={{ margin: 10,   backgroundColor: 'white',
           padding: 10,
           borderRadius: 10,
-          borderColor:"#2FCBD8",
+          borderColor:"#00A859",
           borderWidth:2,
           width:150}}>
             <Text>{item.title}</Text>
           </View>
         )}
       />
-         <Text style={styles.labText}>Our Facilities</Text>
-         <Image source={require("../../assets/photos/plus.png")} style={{width:100, height:100, marginTop:260, marginLeft:280}}/>
+         <Text style={styles.labText}>New items</Text>
+         <Image source={require("../../assets/photos/plus-green.png")} style={{width:100, height:100, marginTop:260, marginLeft:280}}/>
          </ScrollView>
       </SafeAreaView>
   );
@@ -89,7 +90,7 @@ button2: {
   marginLeft:40,
   marginTop:20,
   borderWidth: 2,
-  borderColor: "#2FCBD8",
+  borderColor: "#00A859",
 
   // justifyContent:"center"    its not working in js engine: hermes
 },
@@ -100,7 +101,7 @@ buttonText: {
   textAlign: 'center',
 },
 button1: {
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   padding: 10,
   borderRadius: 5,
   borderColor:"white",
@@ -120,7 +121,7 @@ buttonText1: {
 line: {
   height: 1,
   width: '40%',
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   marginTop:20,
 },
 lineBox: {
@@ -146,14 +147,14 @@ helloText: {
   marginTop:-80,
 },
 abebeText: {
-  color: '#2FCBD8',
+  color: '#00A859',
   fontWeight:'bold',
   fontSize: 40,
 },
 testText: {
   color: 'grey',
   fontWeight:'bold',
-  fontSize: 15,
+  fontSize: 13,
   marginLeft:10,
 },
 labText: {
@@ -161,5 +162,12 @@ labText: {
   fontWeight:'bold',
   fontSize: 20,
   marginLeft:10,
+},
+textName: {
+  color: '#00A859',
+  fontSize: 30,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  marginBottom: 20,
 },
 })

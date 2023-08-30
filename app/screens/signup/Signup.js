@@ -61,19 +61,20 @@ export default function App() {
   return (
       <SafeAreaView style={styles.container}> 
       <ScrollView >
-        <View style={{backgroundColor:"black", width:250, height:250, borderRadius:150, opacity:0.2, top: -90, left:-90}}></View>
-        <Image source={require("../../assets/photos/colab.png")} style={{marginBottom:20, marginLeft:70}}/>
-        <View style={{backgroundColor:"white", flex:2, borderTopRightRadius:30, borderTopLeftRadius:30}}>
+        {/* <View style={{backgroundColor:"black", width:250, height:250, borderRadius:150, opacity:0.2, top: -90, left:-90}}></View> */}
+        {/* <Image source={require("../../assets/photos/colab.png")} style={{marginBottom:20, marginLeft:70}}/> */}
+        <Text style={styles.textName}>TROQASH</Text>
+        <View style={{backgroundColor:"white", flex:2, borderRadius:30}}>
         <TextInput
           style={{
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           placeholder={'First Name'}
           onChangeText={(text) => setFirstName(text)}
@@ -83,11 +84,11 @@ export default function App() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           placeholder={'Last Name'}
           onChangeText={(text) => setLastName(text)}
@@ -97,11 +98,11 @@ export default function App() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           placeholder={'Email'}
           onChangeText={(text) => setEmail(text)}
@@ -111,11 +112,11 @@ export default function App() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           secureTextEntry={true}
           onChangeText={(text) => setPassword(text)}
@@ -127,11 +128,11 @@ export default function App() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           secureTextEntry={true}
           onChangeText={(text) => setConfirmPassword(text)}
@@ -143,11 +144,11 @@ export default function App() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
-            marginLeft:40
+            marginLeft:20
           }}
           onChangeText={(text) => setPhoneNumber(text)}
           placeholder={'Phone Number'}
@@ -157,8 +158,8 @@ export default function App() {
            > 
             <Text style={styles.buttonText1}>Sign Up</Text>
            </TouchableOpacity>
-           <Text style={{marginLeft:90}}>Do you have an account?<TouchableOpacity onPress={() => navigation.navigate('Login')} ><Text style={{ color: '#2FCBD8', marginTop:2}}> Login</Text></TouchableOpacity></Text>
-           <Image source={require("../../assets/photos/acubed.png")} style={{marginBottom:20, marginLeft:150}}/>
+           <Text style={{marginLeft:90}}>Do you have an account?<TouchableOpacity onPress={() => navigation.navigate('Main')} ><Text style={{ color: '#00A859', marginTop:2, marginBottom: 5}}> Login</Text></TouchableOpacity></Text>
+           {/* <Image source={require("../../assets/photos/acubed.png")} style={{marginBottom:20, marginLeft:150}}/> */}
         </View>
         </ScrollView>
       </SafeAreaView>
@@ -167,8 +168,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor:"#2FCBD8",
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginTop: 200,
 },
 button: {
   backgroundColor: 'white',
@@ -180,22 +183,29 @@ button: {
   // justifyContent:"center"    its not working in js engine: hermes
 },
 buttonText: {
-  color: '#2FCBD8',
+  color: '#00A859',
   fontSize: 16,
   fontWeight: 'bold',
   textAlign: 'center',
 },
 button1: {
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   padding: 10,
   borderRadius: 5,
   borderColor:"white",
   borderWidth:2,
   width:300,
   marginTop:20,
-  marginLeft:40
+  marginLeft:20
 
   // justifyContent:"center"    its not working in js engine: hermes
+},
+textName: {
+  color: '#00A859',
+  fontSize: 30,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  marginBottom: 20,
 },
 buttonText1: {
   color: 'white',

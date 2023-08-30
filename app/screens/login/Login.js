@@ -64,15 +64,16 @@ export default function Login() {
   return (
       <SafeAreaView style={styles.container}>
         <ScrollView > 
-        <View style={{backgroundColor:"black", width:250, height:250, borderRadius:150, opacity:0.2, top: -90, left:-90}}></View>
-        <Image source={require("../../assets/photos/colab.png")} style={{marginBottom:20, marginLeft:70}}/>
-        <View style={{backgroundColor:"white", flex:2, borderTopRightRadius:30, borderTopLeftRadius:30}}>
+        {/* <View style={{backgroundColor:"black", width:250, height:250, borderRadius:150, opacity:0.2, top: -90, left:-90}}></View> */}
+        {/* <Image source={require("../../assets/photos/colab.png")} style={{marginBottom:20, marginLeft:70}}/> */}
+        <Text style={styles.textName}>TROQASH</Text>
+        <View style={{backgroundColor:"white", flex:2, borderRadius:30}}>
         <TextInput
           style={{
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",  
             borderWidth:1,
             width:300,
             marginTop:20,
@@ -91,7 +92,7 @@ export default function Login() {
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 5,
-            borderColor:"#2FCBD8",
+            borderColor:"#00A859",
             borderWidth:1,
             width:300,
             marginTop:20,
@@ -117,7 +118,7 @@ export default function Login() {
           > 
             <Text style={styles.buttonText1}>Login</Text>
            </TouchableOpacity>
-           <View style={{marginLeft:20}} ><Text><CheckBox title='Remember Me' color='#2FCBD8'></CheckBox> <TouchableOpacity onPress={() => navigation.navigate('ResetEmailScreen')}><Text style={{ color: '#2FCBD8', marginTop:2, marginLeft: 50}}> Forgot the password</Text></TouchableOpacity></Text></View>
+           <View style={{marginLeft:20}} ><Text><CheckBox title='Remember Me' color='#00A859'></CheckBox> <TouchableOpacity onPress={() => navigation.navigate('ResetEmailScreen')}><Text style={{ color: '#00A859', marginTop:2, marginLeft: 50}}> Forgot the password</Text></TouchableOpacity></Text></View>
            <View style={styles.lineBox}>
            <View style={styles.line} 
           //  onPress={handleSubmit} 
@@ -128,8 +129,8 @@ export default function Login() {
            <TouchableOpacity style={styles.button2} >
             <Text style={styles.buttonText}><Image source={require("../../assets/photos/google.png")} style={{width:20, height:20}}  />  GOOGLE</Text>
             </TouchableOpacity>
-           <Text style={{marginLeft:90}}>Do you have an account?<TouchableOpacity onPress={() => navigation.navigate('Signup')}><Text style={{ color: '#2FCBD8', marginTop:2}}> Signup</Text></TouchableOpacity></Text>
-           <Image source={require("../../assets/photos/acubed.png")} style={{marginBottom:20, marginLeft:150}}/>
+           <Text style={{marginLeft:90}}>Do you have an account?<TouchableOpacity onPress={() => navigation.navigate('Signup')}><Text style={{ color: '#00A859', marginTop:2, marginBottom: 5}}> Signup</Text></TouchableOpacity></Text>
+           {/* <Image source={require("../../assets/photos/acubed.png")} style={{marginBottom:20, marginLeft:150}}/> */}
         </View>
         </ScrollView>
       </SafeAreaView>
@@ -138,8 +139,10 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor:"#2FCBD8",
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginTop: 200,
 },
 button: {
   backgroundColor: 'white',
@@ -158,9 +161,16 @@ button2: {
   marginLeft:40,
   marginTop:20,
   borderWidth: 2,
-  borderColor: "#2FCBD8",
+  borderColor: "#00A859",
 
   // justifyContent:"center"    its not working in js engine: hermes
+},
+textName: {
+  color: '#00A859',
+  fontSize: 30,
+  fontWeight: 'bold',
+  textAlign: 'center',
+  marginBottom: 20,
 },
 buttonText: {
   color: '#000',
@@ -169,7 +179,7 @@ buttonText: {
   textAlign: 'center',
 },
 button1: {
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   padding: 10,
   borderRadius: 5,
   borderColor:"white",
@@ -189,7 +199,7 @@ buttonText1: {
 line: {
   height: 1,
   width: '40%',
-  backgroundColor: '#2FCBD8',
+  backgroundColor: '#00A859',
   marginTop:20,
 },
 lineBox: {
